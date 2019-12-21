@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { createCustomer } from '../../store/actions/customerActions'
 import { connect } from 'react-redux';
+import { Redirect } from 'react-router-dom'
 
 export class CreateCustomer extends Component {
   state = {
@@ -18,6 +19,8 @@ export class CreateCustomer extends Component {
   };
 
   render() {
+    const { auth } = this.props
+    if(!auth.uid) return <Redirect to ='/sigin' />
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit} className="white">
@@ -43,10 +46,16 @@ export class CreateCustomer extends Component {
 
 }
 
+const mapStateToProps = (state) => {
+  return{
+    auth: state.firebase.auth
+  }
+}
+
 const mapDispatchToProps = (dispatch) => {
   return {
     createCustomer: (customer) => dispatch(createCustomer(customer))
   }
 }
 
-export default connect(null, mapDispatchToProps)(CreateCustomer);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateCustomer);

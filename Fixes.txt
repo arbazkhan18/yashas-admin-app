@@ -1,0 +1,15 @@
+1. package version fix for syntax error
+
+const store = createStore(
+  rootReducer,
+  compose(
+    applyMiddleware(thunk.withExtraArgument({ getFirebase, getFirestore })),
+    reduxFirestore(fbConfig),
+    reactReduxFirebase(fbConfig)
+  )
+);
+
+npm i --save react-redux@5.1.1 react-redux-firebase@2.2.4
+
+--------------------------------------------------------------------------------------------------------
+

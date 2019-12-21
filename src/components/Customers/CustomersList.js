@@ -5,7 +5,7 @@ const CustomersList = ({customers}) => {
     return (
         <div className="customer-list section">
          {customers && customers.map( customer =>{
-             return(
+             return( 
                  <CustomerSummary customer={customer} key={customer.id}/>
              )
          })}
