@@ -1,12 +1,15 @@
 export const createCustomer = (customer) => {
     return (dispatch, getState, {getFirebase, getFirestore}) => {
         // make async call to database
-        const firestore = getFirestore();
-        firestore.collection('customers').add({
+        const firestore = getFirestore()
+        const profile = getState().firebase.profile
+        const authorId = getState().firebase.auth.uid
+
+        firestore.collection('cowDetails').add({
             ...customer,
-            authorFirstName: 'ruck',
-            authorLastName: 'fules',
-            authorId: 12345,
+            authorFirstName: profile.firstName,
+            authorLastName: profile.lastName,
+            authorId: authorId,
             createdAt: new Date()
         }).then(() => {
             dispatch({ type: 'CREATE_CUSTOMER', customer })

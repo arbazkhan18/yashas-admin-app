@@ -13,3 +13,4 @@ npm i --save react-redux@5.1.1 react-redux-firebase@2.2.4
 
 --------------------------------------------------------------------------------------------------------
 
+git commit -m 'add customer, retrieve data in proper format, momentjs'
