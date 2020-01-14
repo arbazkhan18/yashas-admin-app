@@ -6,6 +6,7 @@ import SignUp from './components/auth/SignUp';
 import Dashboard from './components/dashboard/Dashboard';
 import CustomerDetails from './components/Customers/CustomerDetails';
 import CreateCustomer from './components/Customers/CreateCustomer';
+import DetailedReporting from './components/dashboard/DetailedReporting';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
             <Route path='/create' component={CreateCustomer} />
+            <Route path='/detailed-reporting' component={DetailedReporting} />
           </Switch>
         </div>
       </BrowserRouter>

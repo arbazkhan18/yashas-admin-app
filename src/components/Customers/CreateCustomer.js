@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 import { createCustomer } from '../../store/actions/customerActions'
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
 export class CreateCustomer extends Component {
@@ -59,4 +59,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateCustomer);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateCustomer)

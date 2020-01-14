@@ -1,9 +1,9 @@
-import React, { Component } from "react";
-import Notifications from "./Notifications";
-import CustomersList from "../Customers/CustomersList";
+import React, { Component } from "react"
+import Notifications from "./Notifications"
+import CustomersList from "../Customers/CustomersList"
 import { connect } from "react-redux";
-import { firestoreConnect } from "react-redux-firebase";
-import { compose } from "redux";
+import { firestoreConnect } from "react-redux-firebase"
+import { compose } from "redux"
 import { Redirect } from 'react-router-dom'
 
 class Dashboard extends Component {
@@ -24,13 +24,15 @@ class Dashboard extends Component {
     );
   }
 }
-const mapStateToProps = state => {
+
+const mapStateToProps = (state) => {
   return {
    // customers: state.customer.customersList
    customers: state.firestore.ordered.cowDetails,
    auth: state.firebase.auth
-  };
-};
+  }
+}
+
 export default compose(
   connect(mapStateToProps),
   firestoreConnect([
