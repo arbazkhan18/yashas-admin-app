@@ -17,4 +17,4 @@ last commit
 git commit -m 'add customer, retrieve data in proper format, momentjs, initials of logged in users'
 
 latest commit
-git commit -m ''
+git commit -m 'firebase deploy'
