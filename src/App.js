@@ -21,7 +21,7 @@ class App extends Component {
             <Route path='/signin' component={SignIn} />
             <Route path='/signup' component={SignUp} />
             <Route path='/create' component={CreateCustomer} />
-            <Route path='/formio' component={DetailedReporting} />
+            <Route path='/detailed-reporting' component={DetailedReporting} />
           </Switch>
         </div>
       </BrowserRouter>

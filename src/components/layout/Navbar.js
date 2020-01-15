@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import SingedInLinks from './SingedInLinks'
 import SingedOutlinks from './SignedOutLinks'
 import { connect } from 'react-redux'
+import Sidebar from '../dashboard/Sidebar'
 
 const Navbar = (props) => {
   const { auth, profile } = props
@@ -10,6 +11,8 @@ const Navbar = (props) => {
   return (
     <nav className="nav-wrapper grey darken-3">
       <div className="container">
+      <Sidebar />
+
         <Link to="/" className="brand-logo">
           Yashas App
         </Link>

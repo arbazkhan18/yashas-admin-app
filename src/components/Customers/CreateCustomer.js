@@ -1,6 +1,6 @@
-import React, { Component } from "react";
+import React, { Component } from 'react'
 import { createCustomer } from '../../store/actions/customerActions'
-import { connect } from 'react-redux';
+import { connect } from 'react-redux'
 import { Redirect } from 'react-router-dom'
 
 export class CreateCustomer extends Component {
@@ -21,7 +21,7 @@ export class CreateCustomer extends Component {
 
   render() {
     const { auth } = this.props
-    if(!auth.uid) return <Redirect to ='/sigin' />
+    if(!auth.uid) return <Redirect to ='/signin' />
     return (
       <div className="container">
         <form onSubmit={this.handleSubmit} className="white">
@@ -59,4 +59,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CreateCustomer);
+export default connect(mapStateToProps, mapDispatchToProps)(CreateCustomer)
