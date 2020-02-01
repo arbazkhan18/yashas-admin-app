@@ -11,7 +11,7 @@ const Navbar = (props) => {
   return (
     <nav className="nav-wrapper grey darken-3">
       <div className="container">
-      <Sidebar />
+      {/* <Sidebar /> */}
 
         <Link to="/" className="brand-logo">
           Yashas App
